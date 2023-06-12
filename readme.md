@@ -95,6 +95,17 @@ There is a three step process running the application and generating bird images
 
 
 ### 1.- Description paper
+
+The paper "AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks" introduces a method for generating detailed and realistic images from textual descriptions using a novel attentional generative adversarial network (GAN) framework. The model consists of two main components: a text encoder and an image generator.
+
+The text encoder encodes the input textual description into a semantic vector representation, capturing the salient information. The image generator then uses this vector representation to generate the corresponding image.
+
+One key aspect of AttnGAN is the use of attention mechanisms. The authors introduce a novel Attention Generative Network (AttnGAN) that employs attention at both the global and local levels. The global attention module attends to the entire image, ensuring that the generated image aligns with the overall content of the textual description. The local attention module focuses on specific regions of the image, allowing for the generation of fine-grained details.
+
+To train the model, the authors propose a two-stage process. In the first stage, a conditional GAN is trained to generate images at a coarse level of detail. In the second stage, the model is fine-tuned using a ranking loss that compares the generated images with real images based on their textual descriptions. This ranking loss helps the model capture the nuances and details specified in the textual input.
+
+The experiments conducted by the authors demonstrate that AttnGAN outperforms existing methods in terms of generating visually appealing and detailed images based on textual descriptions. The attention mechanisms employed in AttnGAN enable the model to focus on the most relevant parts of the image, resulting in improved image quality and fine-grained details.
+
 ### 2.- Arquitecture
 ### 3.- Scaling 
 ### 4.- System design on cloud
