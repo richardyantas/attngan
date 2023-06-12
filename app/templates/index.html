@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GANapp</title>
+</head>
+<body>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+    <script>
+        // function showImage() {            
+        //     var imageContainer = document.getElementById("imageContainer");
+        //     var image = document.createElement("img");
+        //     image.src = "https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg";
+        //     // image.src =  {{urlb}};
+        //     imageContainer.innerHTML = "";            
+        //     imageContainer.appendChild(image);                
+        //     var caption = document.getElementById("caption").value;
+        //     console.log(caption)       
+        // }
+
+      </script>
+    <div class="container">        
+        <!-- <form action="/" method="POST"> -->
+        <form method="POST">
+            <div class="image-container" id="imageContainer">
+                <img src="{{ url_for('static', filename='x.svg') }}" alt="SVG Image" width="200" height="200">
+            </div>
+            <textarea name="caption" rows="4" required></textarea>
+            <!-- <div>{{url}}</div> -->
+            <button type="submit" onclick=showImage()>Generate</button>
+        </form>                
+    </div>
+    
+</body>
+</html>

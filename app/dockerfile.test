@@ -1,0 +1,27 @@
+
+# ECS y ECR
+FROM python:3.9.16-buster
+RUN pip install --upgrade pip
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY test.py /usr/src/app/
+COPY prod.in /usr/src/app/
+RUN pip install -r prod.in
+EXPOSE 5000
+CMD ["python", "test.py"]
+
+# map docker 6565
+
+# docker build -t flask-app -f dockerfile.test .
+# docker run --rm -p  6565:5000 flask-app
+
+# connect to ec2
+# ssh -i "test.pem" ubuntu@ec2-15-229-71-180.sa-east-1.compute.amazonaws.com
+
+
+
+# tag: public.ecr.aws/c0b5t4d6/flask-app:latest
+
+
+# create ECS an then ECR

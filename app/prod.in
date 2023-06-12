@@ -1,0 +1,11 @@
+Flask
+python-dateutil
+easydict
+scikit-image
+# azure-storage-blob
+# applicationinsights
+libmc
+boto3
+# pip install -r prod.in
+cachelib
+python-dotenv

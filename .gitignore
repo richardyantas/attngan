@@ -1,0 +1,11 @@
+backup
+output
+trainer/*.pyc
+trainer/miscc/*.pyc
+.DS_Store
+.idea/
+
+**/__pycache__/**
+**/cache
+
+app/data/
