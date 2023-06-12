@@ -95,9 +95,6 @@ There is a three step process running the application and generating bird images
 
 
 ### 1.- Description paper
-
-
-
 ### 2.- Arquitecture
 ### 3.- Scaling 
 ### 4.- System design on cloud

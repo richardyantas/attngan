@@ -1,0 +1,10 @@
+name: attngan
+channels:  
+  - defaults
+  - nvidia
+  - pytorch
+dependencies:
+  - python=3.9.16
+  - pip
+  - pip:
+    - -r file:requirements.txt
