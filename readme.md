@@ -1,8 +1,13 @@
 
+# Scopic Challenge
+
+This repo is an extension of attgan paper implementation that can be found in [attan](https://github.com/taoxugit/AttnGAN) 
+
 # Task1 y Task2
 
 ### Table of contents:
 
+- [Scopic Challenge](#scopic-challenge)
 - [Task1 y Task2](#task1-y-task2)
     - [Table of contents:](#table-of-contents)
     - [1.- Environment setup](#1--environment-setup)
@@ -107,7 +112,31 @@ To train the model, the authors propose a two-stage process. In the first stage,
 The experiments conducted by the authors demonstrate that AttnGAN outperforms existing methods in terms of generating visually appealing and detailed images based on textual descriptions. The attention mechanisms employed in AttnGAN enable the model to focus on the most relevant parts of the image, resulting in improved image quality and fine-grained details.
 
 ### 2.- Arquitecture
+
+The arquitecture proposed is to run the model on the server side for the following reasons: to manage computational resources such as RAM memory to load the model that in generative models it occupy 
+large amount of memory. In this paper the pretrainermodels `text_encoder200.pth` and `image_encoder200.pth` accupy 8.M and 87M respectively, these pretrained models are used for training a general AttnGAN using attention mechanism obtaining a model `bird_AttnGAN2.pth` the use 28M of memory.
+
 ### 3.- Scaling 
+
+Ths Scaling of this project can be achieved through various approaches. Here are some strategies for scaling the solution:
+
+- Distributed Training: To handle larger datasets and accelerate training, you can employ distributed training techniques or using technologies such as `Ray`. This involves using multiple machines or GPUs to parallelize the training process. Techniques like data parallelism or model parallelism can be applied to distribute the workload and speed up training.
+
+- Model Optimization: The AttnGAN model can be optimized to make it more efficient and scalable. This could involve reducing the model's complexity, exploring more efficient network architectures, or applying techniques like model pruning, quantization, or knowledge distillation to reduce the model's size and computational requirements.
+
+- Cloud Computing: Leveraging cloud computing services can facilitate scaling the solution. Cloud platforms like Amazon Web Services (AWS), Google Cloud Platform (GCP), or Microsoft Azure provide powerful infrastructure and GPU instances that can handle intensive computations required for training and inference. We can leverage their scalable resources to distribute the workload or deploy multiple instances of the model.
+
+- Batch Processing: Instead of processing images and text descriptions one at a time, We can implement batch processing techniques. This involves grouping multiple inputs together and processing them simultaneously, taking advantage of parallelism and reducing overhead. Batch processing can significantly improve efficiency when handling large volumes of data.
+
+- Caching and Precomputing: If there are computationally expensive or frequently repeated operations in the pipeline, you can cache or precompute the results to avoid redundant calculations. This can save computational resources and speed up the overall process.
+
+- Incremental Learning: Instead of retraining the entire model from scratch when new data becomes available, you can adopt incremental learning techniques. This allows us to update the model using new data while retaining knowledge from the previous training, thus minimizing training time and computational resources.
+
+- Load Balancing and Auto-Scaling: When deploying the model in a server-based architecture, load balancing techniques can be employed to distribute incoming requests evenly across multiple servers or instances. Auto-scaling mechanisms can automatically adjust the number of server instances based on demand, ensuring optimal resource allocation during peak loads.
+
+By implementing these scaling strategies, we can handle larger datasets, improve training and inference efficiency, and accommodate increased user demand or workloads. The specific approach to scaling will depend on the available resources, infrastructure, and requirements of the application.
+
+
 ### 4.- System design on cloud
 ### 5.- 
 
