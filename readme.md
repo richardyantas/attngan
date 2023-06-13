@@ -22,7 +22,7 @@ This repo is an extension of attgan paper implementation that can be found in [a
     - [2.- Arquitecture](#2--arquitecture)
     - [3.- Scaling](#3--scaling)
     - [4.- System design on cloud](#4--system-design-on-cloud)
-    - [5.-](#5-)
+    - [5.- Tools and frameworks that could simplify the deployment process.](#5--tools-and-frameworks-that-could-simplify-the-deployment-process)
 
 
 ### 1.- Environment setup
@@ -138,5 +138,19 @@ By implementing these scaling strategies, we can handle larger datasets, improve
 
 
 ### 4.- System design on cloud
-### 5.- 
+
+Some of the  host machine specifications on cloud are the following:
+
+- The use of S3 to store images generated to use later on the app
+- The use of services such as ECR (to register docker images repositories )
+- The use of EC2 `t2.micro` automaticly by ECS in the `cluster` creation.
+- The use of task that 
+
+
+### 5.- Tools and frameworks that could simplify the deployment process.
+
+- Aws command line 
+- Terraform 
+- Docker
+- Jenkins
 
