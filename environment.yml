@@ -1,4 +1,4 @@
-name: attngan
+name: attngan2
 channels:  
   - defaults
   - nvidia
