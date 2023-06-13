@@ -31,7 +31,6 @@ We use conda to create our environment
 
     conda env create -f environment.yml 
     conda activate attngan
-    pip install -r requirements.txt
 
 
 ### 2.- Steps to run the training
