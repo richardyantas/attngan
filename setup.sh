@@ -1,0 +1,1 @@
+# https://towardsdatascience.com/goodbye-pip-freeze-welcome-pipreqs-258d2e7a5a62
