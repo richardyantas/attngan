@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                // "--cfg", "cfg/DAMSM/bird.yml",
+                // "--cfg", "/home/serendipita/Documents/repos/AttnGAN/code/cfg/DAMSM/bird.yml",
+                // "--gpu", "0",
+                // "--data_dir", "/home/serendipita/Documents/repos/AttnGAN/data/birds"
+                "--cfg", "/home/serendipita/Documents/repos/AttnGAN/code/cfg/bird_attn2.yml",
+                "--gpu", "0",
+                "--data_dir", "/home/serendipita/Documents/repos/attngan/data/birds",
+                "--output_dir", "/home/serendipita/Documents/repos/attngan/output",
+                "--img_encoder_path", "/home/serendipita/Documents/repos/attngan/DAMSMencoders/bird/image_encoder200.pth",
+                "--txt_encoder_path", "/home/serendipita/Documents/repos/attngan/DAMSMencoders/bird/text_encoder200.pth"
+            ]
+        }
+    ]
+}
